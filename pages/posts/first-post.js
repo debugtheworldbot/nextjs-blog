@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Head from "next/head";
-import layout from "../../componens/layout"
-import Layout from "../../componens/layout";
-export default function FirstPost() {
+import Layout from "../../components/layout";{
     return (
         <>
             <Layout>
