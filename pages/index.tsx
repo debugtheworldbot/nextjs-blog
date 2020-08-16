@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {GetServerSideProps, NextPage} from "next";
 import {UAParser} from 'ua-parser-js'
 
@@ -11,9 +11,15 @@ type Props={
 }
 const Home:NextPage<Props>=(props)=> {
     const {browser}=props
+    const [width,setWidth]=useState(0)
+    useEffect(()=>{
+        const w = document.documentElement.clientWidth
+        setWidth(w)
+    },[])
     return (
         <div>
             <h1>Your browser is {browser.name}</h1>
+            <h1>Your browser width is {width}</h1>
         </div>
     );
 }
