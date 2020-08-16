@@ -10,7 +10,7 @@ const PostsIndex:NextPage<Props>=(props)=>{
         <div>
             <h1>文章列表</h1>
             {posts.map(p=><div key={p.id}>
-                <Link href={`/posts/${p.id}`}>
+                <Link href="/posts/[id]" as={`/posts/${p.id}`}>
                     <a>{p.id}</a>
                 </Link>
             </div>)}
